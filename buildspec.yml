@@ -13,6 +13,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
+      - chmod +x gradlew
       - gradlew --version
       - gradlew build
       - docker build -t $REPOSITORY_URI:latest .
